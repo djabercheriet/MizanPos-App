@@ -1,0 +1,29 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'maven-publish'
+
+group = 'expo.modules.mizanepinnedwss'
+version = '1.0.0'
+
+def expoModulesCorePlugin = new File(project(":expo-modules-core").projectDir.absolutePath, "ExpoModulesCorePlugin.gradle")
+apply from: expoModulesCorePlugin
+applyKotlinExpoModulesCorePlugin()
+useCoreDependencies()
+useExpoPublishing()
+
+android {
+  namespace "expo.modules.mizanepinnedwss"
+  compileSdk rootProject.ext.compileSdkVersion
+  defaultConfig {
+    versionCode 1
+    versionName "1.0.0"
+  }
+  lint {
+    abortOnError false
+  }
+}
+
+dependencies {
+  // OkHttp provides the platform WebSocket client used for the pinned WSS transport.
+  implementation "com.squareup.okhttp3:okhttp:4.12.0"
+}

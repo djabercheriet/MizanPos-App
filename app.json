@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "MIZANE Scanner",
+    "slug": "mizane-mobile-scanner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "mizanescanner",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "jsEngine": "hermes",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mizane.mobilescanner",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "MIZANE Scanner uses the camera to read product barcodes and to scan the pairing QR code shown by your MIZANE POS terminal.",
+        "NSLocalNetworkUsageDescription": "MIZANE Scanner connects directly to your MIZANE POS terminal on the local network so scanned barcodes reach the till. Nothing is sent to the internet.",
+        "NSAppTransportSecurity": {
+          "NSAllowsLocalNetworking": true
+        },
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.mizane.mobilescanner",
+      "versionCode": 1,
+      "edgeToEdgeEnabled": true,
+      "allowBackup": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.VIBRATE",
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "MIZANE Scanner uses the camera to read product barcodes and to scan the pairing QR code shown by your MIZANE POS terminal.",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": false
+        }
+      ]
+    ]
+  }
+}

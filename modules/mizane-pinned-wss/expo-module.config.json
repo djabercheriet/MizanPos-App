@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": {
+    "modules": ["MizanePinnedWssModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.mizanepinnedwss.MizanePinnedWssModule"]
+  }
+}
