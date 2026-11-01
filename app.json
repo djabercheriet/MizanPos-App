@@ -4,6 +4,7 @@
     "slug": "mizane-mobile-scanner",
     "version": "1.0.0",
     "orientation": "portrait",
+    "icon": "./assets/branding/app-icon.png",
     "scheme": "mizanescanner",
     "userInterfaceStyle": "dark",
     "newArchEnabled": true,
@@ -34,6 +35,7 @@
       ]
     },
     "plugins": [
+      "./plugins/with-mizane-release-signing",
       [
         "expo-camera",
         {
